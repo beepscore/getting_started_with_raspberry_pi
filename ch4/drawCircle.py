@@ -14,7 +14,7 @@ pygame.init()
 
 # window is a Pygame 'surface'
 window = pygame.display.set_mode((width, height))
-window.fill(pygame.Color(255, 255, 255))
+window.fill(pygame.Color(0, 0, 0))
 
 # each iteration is like an animation frame
 while True:
