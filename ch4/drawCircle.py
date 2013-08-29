@@ -2,6 +2,12 @@
 
 # Use python 2.x not 3, because Raspbian PyGame doesn't work with 3.
 
+# Reference
+# Getting Started with Raspberry Pi
+# Richardson and Wallace
+# <http://shop.oreilly.com/product/0636920023371.do>
+# Ch 4
+
 import pygame
 
 width = 640
@@ -23,14 +29,14 @@ while True:
     for i in range(0, 255):
         xpos = i
         ypos = i
-        
+
         # draw to offscreen buffer
         pygame.draw.circle(window,
                            pygame.Color(255, 0, 0),
                            (width/2, height/2),
                            radius,
                            stroke)
-        
+
         pygame.draw.circle(window,
                            pygame.Color(0, 0, 255),
                            (xpos, ypos),
@@ -40,7 +46,7 @@ while True:
 
         # update view
         pygame.display.update()
-        
+
     # enable close button in Pygame window
     if pygame.QUIT in [e.type for e in pygame.event.get()]:
         break
